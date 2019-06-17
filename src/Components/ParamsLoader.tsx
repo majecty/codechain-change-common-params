@@ -56,7 +56,12 @@ export default class ParamsLoader extends Component<OwnProps, OwnState> {
           </Col>
         </Row>
         <Row>
-          <span className="col-12 mb-3"> Load from RPC </span>
+          <span className="col-12 mb-3">
+            Load from RPC
+            <br />
+            (The CodeChain's default URL(http://localhost:8080) doesn't work in FireFox. Please use
+            Chrome instead)
+          </span>
           <Col xs="12" lg="9" className="mb-3">
             <Form.Control
               type="text"
@@ -116,7 +121,10 @@ export default class ParamsLoader extends Component<OwnProps, OwnState> {
       });
     } catch (err) {
       console.error(err);
-      alert(err);
+      alert(
+        "Failed to load. Please check CodeChain is listening on the address\nInternal error: " +
+          err.toString(),
+      );
     }
   };
 }
