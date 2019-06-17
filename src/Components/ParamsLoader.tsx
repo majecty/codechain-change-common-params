@@ -62,7 +62,7 @@ export default class ParamsLoader extends Component<OwnProps, OwnState> {
               type="text"
               value={this.state.typedCodeChainRPCURL}
               onChange={this.handleRPCURLInputChange}
-              placeholder="Paste RLP encoded data of the Common Params"
+              placeholder="Paste CodeChain's RPC URL(like http://localhost:8080)"
             />
           </Col>
           <Col xs="12" lg="3">
